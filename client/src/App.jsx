@@ -11,7 +11,6 @@ function App() {
     setIsLoading(true);
 
     try {
-      // Esta es la parte clave: hacer la petición a tu backend
       const response = await fetch(
         `http://localhost:3000/validate/${username}`,
       );
@@ -55,12 +54,6 @@ function App() {
           <p>{validationResult.message}</p>
         </div>
       )}
-
-      <div className="info">
-        <p>
-          <strong>Nota:</strong> Usuarios válidos para probar: "facu", "facundo"
-        </p>
-      </div>
     </div>
   );
 }
