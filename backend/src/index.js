@@ -1,7 +1,11 @@
 import express from "express";
+import cors from "cors";
 
 const app = express();
 const usersValidate = ["facu", "facundo"];
+
+// Middleware
+app.use(cors());
 
 // Rutas
 
