@@ -13,20 +13,20 @@ app.get("/", (_req, res) => {
   res.json({ probando: "hola" });
 });
 
-app.get("/validate/:name", (req, res) => {
-  const name = req.params.name;
+app.get("/validate/:username", (req, res) => {
+  const username = req.params.name;
 
-  if (usersValidate.includes(name)) {
+  if (usersValidate.includes(username)) {
     return res.json({
       validate: true,
-      message: `El usuario ${name} es válido`,
+      message: `El usuario ${username} es válido`,
     });
   }
 
-  if (!usersValidate.includes(name)) {
+  if (!usersValidate.includes(username)) {
     return res.json({
       validate: false,
-      message: `El usuario ${name} no es válido`,
+      message: `El usuario ${username} no es válido`,
     });
   }
 });
